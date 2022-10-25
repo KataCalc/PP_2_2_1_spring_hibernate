@@ -23,7 +23,6 @@ public class CarDaoImp implements CarDao {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
     public List<Car> listCar() {
         TypedQuery<Car> query = sessionFactory.getCurrentSession().createQuery("from Car",Car.class);
         return query.getResultList();
